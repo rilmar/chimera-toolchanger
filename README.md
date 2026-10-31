@@ -1,7 +1,7 @@
 # chimera-toolchanger
 A tool changing system for Klipper based printers.
 
-<img src="images/chimera-preview.png" alt="Chimera Render" width="300">
+<img src="images/toolchanger.jpeg" alt="Chimera" width="300">
 
 ### Current State
 pre-Alpha/Alpha
@@ -22,6 +22,9 @@ Many systems are attempting this style of toolchanger using different mechanisms
 
 Testing the mechanism has shown promise and I'm beefing up the system to verify reliability. Excessive flow would normally cause the extruder to skip but in this case causes the maxwell coupling to unseat. Flow seems to easily handle 18 to 20 mm3/s but I need to test to confirm if this is limited by the coupling or by the max flow of my hotends (cheap x1 clones).
 
+
+
+<img src="images/chimera-preview.png" alt="Chimera Render" width="300">
 
 
 | Toolhead               | Tool.                  |
@@ -57,7 +60,9 @@ Notes:
 
 * The dock will eventually incorporate a switch to detect which tools are present and be able to initialize to any tool.
 
-## 
+<video width="320" height="240" controls>
+  <source src="images/toolchange.mov" type="video/mp4">
+</video>
 
 ## BOM
 `incomplete`
