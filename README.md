@@ -23,7 +23,7 @@ A tool is composed of a set of hgx v2 gears in a fixed arrangement (no tensionin
 The front of each tool has a cover that contains the screws used for docking a tool and a hollow space to manage wires.
 
 ## Docks
-As I'm prototyping on a 2.4 the current dock is designed to use z motion to lift the tool up and lower it into the cradle then move in y to disengage. I'm also using a 1515 bar across the top of the printer as I has one available to be used for another tool changing system. 
+As I'm prototyping on a 2.4 the current dock is designed to use z motion to lift the tool up and lower it into the cradle then move in y to disengage. I'm also using a 1515 bar across the top of the printer as I have one available that was to be used for another tool changing system. 
 
 ## BOM
 `incomplete`
