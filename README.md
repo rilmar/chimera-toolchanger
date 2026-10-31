@@ -1,6 +1,8 @@
 # chimera-toolchanger
 A tool changing system for Klipper based printers.
 
+![tool preview](images/chimera-preview.png)
+
 ### Current State
 Testing tool changes 
 Tool changing and calibration work, supporting infrastructure is needed for reliable printer like nozzle guards on the docks and tool sensing.
