@@ -1,7 +1,7 @@
 # chimera-toolchanger
 A tool changing system for Klipper based printers.
 
-![tool preview](images/chimera-preview.png)
+<img src="images/chimera-preview.png" alt="Chimera Render" width="300">
 
 ### Current State
 pre-Alpha/Alpha
@@ -22,7 +22,15 @@ Many systems are attempting this style of toolchanger using different mechanisms
 
 Testing the mechanism has shown promise and I'm beefing up the system to verify reliability. Excessive flow would normally cause the extruder to skip but in this case causes the maxwell coupling to unseat. Flow seems to easily handle 18 to 20 mm3/s but I need to test to confirm if this is limited by the coupling or by the max flow of my hotends (cheap x1 clones).
 
+
+
+| Toolhead               | Tool.                  |
+| ---------------------- | ---------------------- |
+| <img src="images/toolhead-preview.png" alt="Chimera Render" height="200"> | <img src="images/tool-preview.png" alt="Chimera Render" height="200"> |
+
+
 ## Toolhead
+
 The toolhead carries the part fans and extruder motor in addition to a tool detection sensor. The motor requires a 5mm shaft for a bond tech-style 17 tooth motor gear that was part of the big gear sets before the smaller nematodes 14 motors with an integrated gear became common. The part cooling fans were designed to be modular and prioritized footprint over capability to try and keep the size of tools minimal. For this reason 3010 blower fans are used. The LDO fans meant for the jabberwocky project provide high static pressure and perform well here. Future fan designs may be adapted but there are other priorities at the time of writing. The Maxwell coupling side on the toolhead uses 6 2x10mm pins and an additional 6 6x3mm round magnets. The detection sensor uses a standard microswith (with metal lever) in the toolhead and locked in place with 2 m2x10 self tapping screw
 
 The toolhead is designed around the xol carriage though adapting to a standard stealth burner carriage shouldn't be difficult. Testing has been conducted with the standard xol cartographer probe mount though any options that work with xol should work.
@@ -33,6 +41,7 @@ Notes:
 * The 3010's fan ducts have undergone basic CFD analysis to confirm air is going under the nozzle but further optimization will eventually be done. The fan ducts are modular for this purpose to avoid reprinting large parts after optimizing fans. 
 
 ## Tools
+
 A tool is composed of a set of hgx v2 gears in a fixed arrangement (no tensioning) with a Bambu X1 style hotend. While a set of gears and a hotend are needed for each tool these can be regularly found for $15 or less each so the cost can be minimized as long as engineering hotends aren't used. A goal here was to be able to mix and match X1 style hotends with a few nice ones and a few cheap ones if desired. A 2510 hotend fan is also used per tool to cool the heatbreak. The maxwell portion of the tool uses 3 4x6mm rounded pins (6mm total length with an approximately 2mm fillet on one end) to interface with the pins on the toolhead carriage. A set of 6 3x6mm magnets attracts it to the toolhead.
 
 The front of each tool has a cover that contains the screws used for docking a tool and a hollow space to manage wires.
