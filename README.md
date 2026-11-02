@@ -98,7 +98,9 @@ This is incomplete and will be formalized later. I just wanted to call out a few
 ## Assembly
 TODO
 
-The cad will be provided to reference for assembly. I recommend placing the magnets in alternating polarity to provide the strongest connection and alignment forces. Also, inserting the round head 
+The cad will be provided to reference for assembly. I recommend placing the magnets in alternating polarity to provide the strongest connection and alignment forces. 
+
+Also inserting the round head pin can be tedious but is made easier with a 4mm drill bit or a 4mm pin to ream out the hole. Additionally I've been using a 4mm pin and bushing to make an insertion tool to hold and push on the rounded pin.
 
 ## Electronics
 TODO
