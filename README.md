@@ -15,10 +15,7 @@ but it does work....
 | <img src="images/sample-prints/dragon-1.jpeg" alt="dragon 1" height="200"> | <img src="images/sample-prints/dragon-2.jpeg" alt="dragon 2" height="200"> |
 | <img src="images/sample-prints/panda-in-progress.jpeg" alt="in progress" height="200"> | <img src="images/sample-prints/panda.jpeg" alt="panda" height="200"> |
 
-Timelapse (4x speed)
-<video width="320" height="240" controls>
-  <source src="images/sample-prints/timelapse.mp4" type="video/mp4">
-</video>
+[Timelapse (4x speed)](images/sample-prints/timelapse.mp4)
 
 ## The Idea
 I want a toolchanger that changes the filament path without changing the entire toolhead. I also want to throw this on an existing 2.4 without losing a large amount of print volume. There's a lot of great projects that are either in active development or some stage of published but I wanted something slightly different. This specific project is an attempt to take the things i like and mash them together hence the "chimera" name. This is not a condemnation of those projects and whatever components they use (I'll likely build some of those projects in the future) but rather an experimentation to see where some other ideas can lead.
@@ -78,9 +75,8 @@ Notes:
 
 * The dock will eventually incorporate a switch to detect which tools are present and be able to initialize to any tool.
 
-<video width="320" height="240" controls>
-  <source src="images/toolchange.mov" type="video/mp4">
-</video>
+
+[docking sequence](images/toolchange.mov)
 
 ## BOM
 This is incomplete and will be formalized later. I just wanted to call out a few more unique parts.
