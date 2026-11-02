@@ -5,7 +5,20 @@ A tool changing system for Klipper based printers.
 
 ### Current State
 pre-Alpha/Alpha
-Changing and calibration work, supporting infrastructure is needed for reliable printer i.e. nozzle guards on the docks and tool sensing.
+Changing and calibration work, supporting infrastructure is needed for reliable printer i.e. nozzle guards on the docks and tool sensing. At this point configuration is the component holding it back.
+
+but it does work....
+
+
+|     Sample Prints           |                   |
+| ---------------------- | ---------------------- |
+| <img src="images/sample-prints/dragon-1.jpeg" alt="dragon 1" height="200"> | <img src="images/sample-prints/dragon-2.jpeg" alt="dragon 2" height="200"> |
+| <img src="images/sample-prints/panda-in-progress.jpeg" alt="in progress" height="200"> | <img src="images/sample-prints/panda.jpeg" alt="panda" height="200"> |
+
+Timelapse (4x speed)
+<video width="320" height="240" controls>
+  <source src="images/sample-prints/timelapse.mp4" type="video/mp4">
+</video>
 
 ## The Idea
 I want a toolchanger that changes the filament path without changing the entire toolhead. I also want to throw this on an existing 2.4 without losing a large amount of print volume. There's a lot of great projects that are either in active development or some stage of published but I wanted something slightly different. This specific project is an attempt to take the things i like and mash them together hence the "chimera" name. This is not a condemnation of those projects and whatever components they use (I'll likely build some of those projects in the future) but rather an experimentation to see where some other ideas can lead.
@@ -17,7 +30,11 @@ I'd like to mention a few inspirations here:
 * Armored Turtle and their preview of the ["teased" armored turtle changer](https://youtu.be/wiunEjQLO7o?si=8A-k8uzNSUXgyrMH&t=1113)
 * [CXChanger](https://github.com/WheelsTheCat/CxChanger) (English translation)
 * Discord user ycsy in the A4T-C channel as his Maxwell coupling was remixed for this project
-* [protoxtruder 2](https://www.printables.com/model/822947-protoxtruder-20) and [susburner](https://github.com/ArmoredTurtle/SUSBurner) which helped me design the extruder.
+
+Also, I've remixed some components including:
+* [protoxtruder 2](https://www.printables.com/model/822947-protoxtruder-20) and [susburner](https://github.com/ArmoredTurtle/SUSBurner) which were referenced for the extruder.
+* [A toolboard mount with PG7 gland](https://www.printables.com/model/974927-wwg2-nh36ebb36-mount-for-pg7-gland)
+* [A mounting solution for 1515 extrusion](https://www.printables.com/model/1675728-voron-24-indx-tool-top-mount-1515-extrusion) on a 2.4 (used for docks) 
 
 Many systems are attempting this style of toolchanger using different mechanisms. I'm seeing the opening of extruder gears and the use of pins for alignment as common approaches. Some extruder opening systems leverage toolhead motion (relying on x and y motors), a servo, or even engaging the extruder gears to pry open the mechanism. These aren't bad ideas but I wanted to approach a system that's simpler. I took some time to look at the Flashforge Creator 5, the Blackbox, and even the "teased" armored turtle changer (ATC) as they all swap gearsets along with the hotend. This adds an additional cost per tool but allows a simpler changing mechanism if done correctly. There's no leverage that is needed to open the extruder and you don't have to worry about skipped steps or burning out a servo. This project uses a carriage mounted motor with a 17 tooth bondtech motor gear that meshes with a set of hgx v2 gears attached to the hotend, similar to the ATC and Blackbox projects. Additionally it uses a maxwell coupling (derived from user ycsy in the A4T-C project channel and cxchanger) to achieve repeatable coupling. My thoughts around the maxwell coupling in this scenario are that it gives to tool more wiggle before gear engagement to get it seated correctly. 
 
@@ -66,8 +83,12 @@ Notes:
 </video>
 
 ## BOM
-`incomplete`
-* 4x6 rounded pins - 3 per tool
+This is incomplete and will be formalized later. I just wanted to call out a few more unique parts.
+
+* 4mm diameter x 6mm length rounded pins - 3 per tool
+    * [amazon](https://www.amazon.com/uxcell-Stainless-Chamfered-Support-Elements/dp/B0FBRKT4RL/ref=sr_1_8?crid=1AL61681YVNDI&dib=eyJ2IjoiMSJ9.V8MEiZ9BOPZm-nchvICEDJk8DrG1bya2DHEcvOpMBwl5XLndpX9eXZ0njNhFO9nWBy3444o5V-w52AKfFjMwPVvcKf1d_3Dfh2ALsxsdCeDXH3-InDxS2KaT3yH8wUNcgwD89prV_T3-yyCSvzwgyT6Zyaprxv3TiKxdgcTrb-b7d8s9-_7wnJXpe1eLKoqJJNPzU7shNxwpaoyEa8j8AKRCd2ai5OJamPz1srhkNmc.eIAhkc0L6HNptNTIK_D2SciyyWexrbIX8f7pkO10R9g&dib_tag=se&keywords=4mm+round+pins+6mm&qid=1793592934&sprefix=4mm+round+pins+6%2Caps%2C340&sr=8-8)
+    * [aliexpress](https://www.aliexpress.us/item/3256807253015720.html?spm=a2g0o.order_detail.order_detail_item.7.1749126ad62KAo&gatewayAdapt=glo2usa)
+    * inserting these might be easier having a 4mm drill bit on hand or any 4mm pin to ream out the hole. I also used a 4mm pin with a bushing to hold the pin and push on it to insert.
 * 2x10mm pins - 6
 * 3x6mm round magnets (n52 preferred) - 6 for toolhead, 6 more per tool, 1 more per dock
 * HGX V2 gears - 1 per tool
@@ -78,17 +99,33 @@ Notes:
 * Various M3 bolts
 * M3 countersunk 10mm bolts for docking points - 2 per toolhead
 * 2 3010 blower fans for cooling
+* standoffs for toolboard mounting - I'm using 21mm currently
 
 
 ## Assembly
 TODO
 
-The cad will be provided to reference for assembly. I recommend placing the magnets in alternating polarity to provide the strongest connection and alignment forces.
+The cad will be provided to reference for assembly. I recommend placing the magnets in alternating polarity to provide the strongest connection and alignment forces. Also, inserting the round head 
+
+## Electronics
+TODO
+
+I'll probably wait on this section until I have my hands on a proper breakout board like the [Hydra](https://pulsar-3d.com/products/hydra)
+
+Please note: If there's a Y endstop mounted on the motor, the included toolboard mount may interfere with the raised bumper on the gantry to actuate the switch. I fixed this initially by cutting the actuator in half and mounting it only on the outside screw. A new bumper will be included in the files.
 
 ## Software
 TODO
 
+I'm currently using klipper-toolchanger and ignoring the extrusion motor section of each extruder. The toolhead mounted extruder is defined as a shared extruder and synced to the relevant extruder's motion queue on tool change.
 
+
+
+# Changelog
+* V0.1.0
+    * Initial CAD upload
+    * Initial write-up
+    * Some media
 
 This work is licensed under a
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
