@@ -1,0 +1,1 @@
+To print use the standard voron settings. Not all parts are oriented correctly. All part should print without supports.
