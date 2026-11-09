@@ -14,6 +14,7 @@ but it does work....
 | ---------------------- | ---------------------- |
 | <img src="images/sample-prints/dragon-1.jpeg" alt="dragon 1" height="200"> | <img src="images/sample-prints/dragon-2.jpeg" alt="dragon 2" height="200"> |
 | <img src="images/sample-prints/panda-in-progress.jpeg" alt="in progress" height="200"> | <img src="images/sample-prints/panda.jpeg" alt="panda" height="200"> |
+| <img src="images/sample-prints/multicolor-1.jpeg" alt="dragon 1" height="200"> ||
 
 [Timelapse (4x speed)](https://youtube.com/shorts/eu6byF03On0?feature=share)
 
@@ -109,6 +110,12 @@ I'll probably wait on this section until I have my hands on a proper breakout bo
 
 Please note: If there's a Y endstop mounted on the motor, the included toolboard mount may interfere with the raised bumper on the gantry to actuate the switch. I fixed this initially by cutting the actuator in half and mounting it only on the outside screw. A new bumper will be included in the files.
 
+I'm using a jst 6 pin connector and extension for wiring at the toolhead.
+
+<img src="images/wiring-tool.jpeg" alt="wiring in the tool" height="200">
+
+
+
 ## Software
 TODO
 
@@ -117,6 +124,8 @@ I'm currently using klipper-toolchanger and ignoring the extrusion motor section
 
 
 # Changelog
+* V0.2.0
+  * Added some room in the tool for wiring. Now allows 6 pin jst xh connector for connecting all wires at once.
 * V0.1.0
     * Initial CAD upload
     * Initial write-up
