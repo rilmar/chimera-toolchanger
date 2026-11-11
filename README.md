@@ -14,7 +14,7 @@ but it does work....
 | ---------------------- | ---------------------- |
 | <img src="images/sample-prints/dragon-1.jpeg" alt="dragon 1" height="200"> | <img src="images/sample-prints/dragon-2.jpeg" alt="dragon 2" height="200"> |
 | <img src="images/sample-prints/panda-in-progress.jpeg" alt="in progress" height="200"> | <img src="images/sample-prints/panda.jpeg" alt="panda" height="200"> |
-| <img src="images/sample-prints/multicolor-1.jpeg" alt="dragon 1" height="200"> ||
+| <img src="images/sample-prints/multicolor-1.jpeg" alt="dragon 1" height="200"> | <img src="images/sample-prints/tpu_print.jpg" alt="tpu and pla print" height="200"> |
 
 [Timelapse (4x speed)](https://youtube.com/shorts/eu6byF03On0?feature=share)
 
@@ -124,12 +124,18 @@ I'm currently using klipper-toolchanger and ignoring the extrusion motor section
 
 
 # Changelog
+* V0.3.0
+  * tighter tolerances on the extruder to facilitate better flexible printing.
+  * Split CAD for toolhead and docks for easier management.
 * V0.2.0
   * Added some room in the tool for wiring. Now allows 6 pin jst xh connector for connecting all wires at once.
 * V0.1.0
     * Initial CAD upload
     * Initial write-up
     * Some media
+
+
+## License
 
 This work is licensed under a
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
