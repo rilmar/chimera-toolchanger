@@ -57,7 +57,7 @@ The toolhead carries the part fans and extruder motor in addition to a tool dete
 The toolhead is designed around the xol carriage though adapting to a standard stealth burner carriage shouldn't be difficult. Testing has been conducted with the standard xol cartographer probe mount though any options that work with xol should work.
 
 Notes:
-* The toolhead's motor gear can also be used with the Blackbox project's [IGUS SLS printed motor gear](https://kb-3d.com/store/motion-system/31-blackbox-igus-sls-extruder-drive-gear-1634506563098.html). This might help with longevity as it's meant to seat into a gear where the stock bondtech motor gear was not designed around that constraint. Further testing (and a grub screw) is needed
+* ~~The toolhead's motor gear can also be used with the Blackbox project's [IGUS SLS printed motor gear](https://kb-3d.com/store/motion-system/31-blackbox-igus-sls-extruder-drive-gear-1634506563098.html). This might help with longevity as it's meant to seat into a gear where the stock bondtech motor gear was not designed around that constraint. Further testing (and a grub screw) is needed~~ This gear was not gripping well and skipping steps. Still needs further testing but priority is low as the stock motor gear has been working well.
 
 * The 3010's fan ducts have undergone basic CFD analysis to confirm air is going under the nozzle but further optimization will eventually be done. The fan ducts are modular for this purpose to avoid reprinting large parts after optimizing fans (and maybe something else...). 
 
