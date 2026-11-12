@@ -9,6 +9,8 @@ Changing and calibration work, supporting infrastructure is needed for reliable 
 
 but it does work....
 
+[Changelog](./Changelog.md)
+
 
 |     Sample Prints           |                   |
 | ---------------------- | ---------------------- |
@@ -58,6 +60,8 @@ Notes:
 * The toolhead's motor gear can also be used with the Blackbox project's [IGUS SLS printed motor gear](https://kb-3d.com/store/motion-system/31-blackbox-igus-sls-extruder-drive-gear-1634506563098.html). This might help with longevity as it's meant to seat into a gear where the stock bondtech motor gear was not designed around that constraint. Further testing (and a grub screw) is needed
 
 * The 3010's fan ducts have undergone basic CFD analysis to confirm air is going under the nozzle but further optimization will eventually be done. The fan ducts are modular for this purpose to avoid reprinting large parts after optimizing fans (and maybe something else...). 
+
+* An experimental toolhead plate and spacer is uploaded as a step file that in design is compatible with the standard [lightweight stealthburner carriage](https://vitalii3d.com/products/super-lightweight-carriage-for-voron-printers-1) and the new chariot carriage. An eddy probe for these will need different spacing than a stealthburner and will include a spacer for the lightweight x carriage and the chariot carriage. This design is untested currently.
 
 ## Tools
 
@@ -120,20 +124,6 @@ I'm using a jst 6 pin connector and extension for wiring at the toolhead.
 TODO
 
 I'm currently using klipper-toolchanger and ignoring the extrusion motor section of each extruder. The toolhead mounted extruder is defined as a shared extruder and synced to the relevant extruder's motion queue on tool change.
-
-
-
-# Changelog
-* V0.3.0
-  * tighter tolerances on the extruder to facilitate better flexible printing.
-  * Split CAD for toolhead and docks for easier management.
-* V0.2.0
-  * Added some room in the tool for wiring. Now allows 6 pin jst xh connector for connecting all wires at once.
-* V0.1.0
-    * Initial CAD upload
-    * Initial write-up
-    * Some media
-
 
 ## License
 
