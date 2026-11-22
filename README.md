@@ -119,6 +119,8 @@ I'm using a jst 6 pin connector and extension for wiring at the toolhead.
 <img src="images/wiring-tool.jpeg" alt="wiring in the tool" height="200">
 
 
+## Other Notes
+A 'chimera blank' CAD file was uploaded that contains no geometry from the xol or stealthburner style mounts. This is to facilitate a custom carriage or easier adaption to another carriage should anyone wish to pursue the modification.
 
 ## Software
 TODO
